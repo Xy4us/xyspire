@@ -113,7 +113,6 @@ const ServiceCard = ({
 }: {
   service: (typeof SERVICES)[0];
   index: number;
-  key?: any;
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 

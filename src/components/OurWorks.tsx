@@ -161,7 +161,6 @@ const ProjectCard = ({
   project: (typeof PROJECTS)[0];
   index: number;
   total: number;
-  key?: any;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { ref: inViewRef, inView } = useInView({

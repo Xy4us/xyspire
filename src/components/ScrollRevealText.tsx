@@ -52,7 +52,6 @@ interface WordProps {
   children: string;
   progress: any;
   range: [number, number];
-  key?: any;
 }
 
 const Word = ({ children, progress, range }: WordProps) => {
