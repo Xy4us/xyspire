@@ -34,10 +34,10 @@ export const ContactSection = () => {
                 <SectionHeading>CONTACT US</SectionHeading>
               </div>
               <h1 className="text-5xl md:text-[80px] font-light tracking-tighter leading-[0.9] text-white">
-                Let's talk about<br />your workflow
+                Let&apos;s talk about<br />your workflow
               </h1>
               <p className="text-white/50 text-lg md:text-xl font-light max-w-lg leading-relaxed">
-                Share a few details about your business and what you’re looking to automate. Our team will review your message and get back to you shortly.
+                Share a few details about your business and what you&apos;re looking to automate. Our team will review your message and get back to you shortly.
               </p>
             </div>
 
@@ -75,28 +75,36 @@ export const ContactSection = () => {
               <div className="grid grid-cols-1 gap-8">
                 {/* Full Name */}
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Full Name</label>
+                  <label htmlFor="full-name" className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Full Name</label>
                   <input 
+                    id="full-name"
+                    name="full-name"
                     type="text" 
                     placeholder="Enter full name"
                     className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-white/20 transition-colors"
+                    required
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Email</label>
+                  <label htmlFor="email" className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Email</label>
                   <input 
+                    id="email"
+                    name="email"
                     type="email" 
                     placeholder="Enter email address"
                     className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-white/20 transition-colors"
+                    required
                   />
                 </div>
 
                 {/* Company Name */}
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Company Name</label>
+                  <label htmlFor="company" className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Company Name</label>
                   <input 
+                    id="company"
+                    name="company"
                     type="text" 
                     placeholder="Enter company name"
                     className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-white/20 transition-colors"
@@ -105,25 +113,32 @@ export const ContactSection = () => {
 
                 {/* Budget */}
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Budget</label>
+                  <label htmlFor="budget" className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Budget</label>
                   <div className="relative">
-                    <select className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white/20 appearance-none focus:outline-none focus:border-white/20 transition-colors">
-                      <option>Select budget range</option>
-                      <option>$1k - $5k</option>
-                      <option>$5k - $10k</option>
-                      <option>$10k+</option>
+                    <select 
+                      id="budget"
+                      name="budget"
+                      className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white appearance-none focus:outline-none focus:border-white/20 transition-colors [&>option]:bg-[#1a1a1d] [&>option]:text-white"
+                    >
+                      <option value="" className="text-white/20">Select budget range</option>
+                      <option value="1k-5k">$1k - $5k</option>
+                      <option value="5k-10k">$5k - $10k</option>
+                      <option value="10k+">$10k+</option>
                     </select>
-                    <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-white/20 pointer-events-none" />
+                    <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 pointer-events-none" />
                   </div>
                 </div>
 
                 {/* Message */}
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Message</label>
+                  <label htmlFor="message" className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase ml-1">Message</label>
                   <textarea 
-                    placeholder="Let us know what we can help..."
+                    id="message"
+                    name="message"
+                    placeholder="Let us know how we can help..."
                     rows={4}
                     className="w-full bg-black/40 border border-white/5 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-white/20 transition-colors resize-none"
+                    required
                   />
                 </div>
               </div>
@@ -132,7 +147,7 @@ export const ContactSection = () => {
                 <p className="text-[11px] text-white/30 leading-relaxed max-w-[240px]">
                   By submitting you agree to our <a href="#" className="text-white/60 hover:text-white transition-colors underline underline-offset-4">Terms of Service</a> and <a href="#" className="text-white/60 hover:text-white transition-colors underline underline-offset-4">Privacy Policy</a>
                 </p>
-                <button className="w-full md:w-auto bg-white text-black px-12 py-4 rounded-2xl font-bold text-sm hover:bg-white/90 transition-all shadow-xl shadow-white/5">
+                <button type="submit" className="w-full md:w-auto bg-white text-black px-12 py-4 rounded-2xl font-bold text-sm hover:bg-white/90 transition-all shadow-xl shadow-white/5">
                   Submit
                 </button>
               </div>
