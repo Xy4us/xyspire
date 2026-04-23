@@ -56,7 +56,7 @@ export const ContactSection = () => {
                   <h4 className="text-white font-medium tracking-tight">Talk with Clarissa</h4>
                   <p className="text-white/40 text-xs uppercase tracking-widest font-bold">Director of Sanjaya</p>
                 </div>
-                <button className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/90 transition-all group">
+                <button type="button" className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-xl text-xs font-bold hover:bg-white/90 transition-all group">
                   Book 15-mins call
                   <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                 </button>
